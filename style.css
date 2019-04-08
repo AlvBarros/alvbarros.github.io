@@ -1,3 +1,15 @@
-* {
-    color: green;
+body {
+    background-color: black;
+}
+#hello {
+    -webkit-transition: all 3.0s linear; 
+    -moz-transition: all 3.0s linear; 
+    -o-transition: all 3.0s linear; 
+    transition: all 3.0s linear;
+
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    width: 10vw;
+    height: 10vw;
 }
