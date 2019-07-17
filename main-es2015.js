@@ -61,7 +61,7 @@ __webpack_require__.r(__webpack_exports__);
 
 let AppComponent = class AppComponent {
     constructor() {
-        this.dataURL = "ws://alvbarroscloud.mybluemix.net";
+        this.dataURL = "wss://alvbarroscloud.mybluemix.net";
         this.connection = new WebSocket(this.dataURL);
         this.connection.onopen = () => { this.onopen(); };
         this.connection.onerror = () => { this.onerror(); };
