@@ -167,11 +167,14 @@
 			</div>
 		</div>
 	</body>
-	<script src="/upup.min.js"></script>
 	<script>
-		UpUp.start({
-			'content-url': 'index.html'
-		});
+		if('serviceWorker' in navigator) {
+			navigator.serviceWorker
+				.register('/sw.js')
+				.then(function() {
+					console.log('Service worker registered!');
+				});
+		}
 	</script>
     <script>
         var locations = [];
