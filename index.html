@@ -210,6 +210,9 @@
 			const popup = L.popup();
 			const marker = L.marker;
 			function onMapClick(e) {
+				if (locations.length >= 15){
+					return;
+				}
 				if (locations.filter((coords) => {
 					coords[0] == e.latlng.lat && coords[1] == e.latlng.lng
 					var diffLat = (e.latlng.lat - coords[0]);
