@@ -19,7 +19,74 @@
             width: 800px;
             margin: auto;
             display: block;
+			border: 3px solid #195128;
+			border-radius: 30px;
         }
+		#calcular {
+			background-color: #4CAF50;
+			border: none;
+			color: #FFFFFF;
+			padding: 6px 32px;
+			text-align: center;
+			transition-duration: 0.4s;
+			margin: 20px auto;
+			text-decoration: none;
+			font-size: 16px;
+			cursor: pointer;
+			display: block;
+		}
+
+		body {
+			margin: 0;
+			font-family: "open_sansextrabold",'Open Sans',Arial,Helvetica,sans-serif;
+		}
+
+		.title-box {
+			background-color: #195128;
+			background-image: radial-gradient(ellipse at center,#17882c 1%,#00510f 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient(startColorstr=#157b28,endColorstr=#00510f,GradientType=1);
+			color: #fff;
+			padding: 1% 5%;
+		}
+		.title-box h2 {
+			margin: 5px 0 15px; padding: 0;
+		}
+		.title-box h5 {
+			margin: 0; padding: 0;
+		}
+
+		.content-box {
+			padding: 2% 5%;
+			background-color: #FAFAFA;
+		}
+		.box {
+			margin: 20px 0;
+		}
+		.box .header {
+			background-color: #fff;
+			margin-left: -1px;
+			margin-right: -1px;
+			border-radius: 3px 0px;
+    		border: 1px solid #e6e6e6;
+		}
+		.box .header h3.title {
+			margin: 10px; padding: 0;
+		}
+		.box .body {
+			background-color: #FAFAFA;
+			margin-left: -1px;
+			margin-right: -1px;
+			border-radius: 0px 3px;
+			border: 1px solid #e6e6e6;
+			margin-top: -1px;
+			padding: 0 5%;
+		}
+		.box .body ul li {
+			list-style: none;
+		}
+		.tutorial h3 {
+			text-align: center;
+		}
         </style>
 
 		<script src='https://cdnjs.cloudflare.com/ajax/libs/leaflet-routing-machine/3.2.5/leaflet-routing-machine.js'></script>
@@ -29,8 +96,50 @@
 		<link href='https://cdnjs.cloudflare.com/ajax/libs/perliedman-leaflet-control-geocoder/1.5.5/Control.Geocoder.min.css' rel='stylesheet' />
     </head>
     <body>
-        <div id="mapid"></div>
-		<input type="button" id="calcular" value="Calcular"/>
+		<div class="title-box">
+			<h2>
+					Desenvolvimento de <i>software</i> de planejamento
+					de rotas terresteres otimizadas aplicando a solução
+					do Problema do Caixeiro Viajante (PCV)
+			</h2>
+			<h5>
+					Trabalho apresentado ao Instituto
+					Federal de São Paulo como parte dos
+					requisitos para aprovação na
+					disciplina de PS1
+			</h5>
+		</div>
+		<div class="content-box">
+			<div class="box tutorial">
+				<div class="header">
+					<h3 class="title">
+							Resumo
+					</h3>
+				</div>
+				<div class="body">
+					<p>
+						d
+					</p>
+				</div>
+			</div>
+			<div id="mapid"></div>
+			<input type="button" id="calcular" value="Calcular"/>
+			<div class="box tutorial">
+				<div class="header">
+					<h3 class="title">
+							Instruções
+					</h3>
+				</div>
+				<div class="body">
+					<ol>
+						<li>Clique no mapa para selecionar os pontos da viagem.</li>
+						<li>O primeiro ponto é considerado o ponto de origem.</li>
+						<li>Clique nos pontos já registrados para excluir.</li>
+						<li>Clique em Calcular para receber a rota otimizada do trajeto.</li>
+						</ol>
+				</div>
+			</div>
+		</div>
     </body>
     <script>
         var locations = [];
@@ -216,6 +325,8 @@
 					BNBCompute();
 				}, (reject) => {});
 			});
+		}, (reject) => {
+			console.log('reject');
 		});
     </script>
 </html>
