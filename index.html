@@ -31,6 +31,14 @@
 			border: 3px solid #195128;
 			border-radius: 30px;
         }
+		#mapid div.no-location {
+			margin-top: 40%;
+			width: 100%;
+			text-align: center;
+			height: 100%;
+			font-size: 250%;
+			vertical-align: middle;
+		}
 		#calcular {
 			background-color: #4CAF50;
 			border: none;
@@ -141,7 +149,11 @@
 					</p>
 				</div>
 			</div>
-			<div id="mapid"></div>
+			<div id="mapid">
+				<div class="no-location">
+					O sistema precisa da localização do seu dispositivo para funcionar.
+				</div>
+			</div>
 			<input type="button" id="calcular" value="Calcular"/>
 			<div class="box result" style="display: none;">
 				<div class="header">
