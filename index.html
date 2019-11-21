@@ -15,8 +15,7 @@
         <!-- </> -->
         <style>
         #mapid {
-            height: 600px;
-            width: 800px;
+            height: 60%;
             margin: auto;
             display: block;
 			border: 3px solid #195128;
@@ -71,6 +70,19 @@
 		}
 		.box .header h3.title {
 			margin: 10px; padding: 0;
+			text-align: center;
+		}
+		@media only screen and (max-device-width: 600px) {
+			.box .header h3.title {
+				font-size: 350%;
+			}
+			.box .body {
+				font-size: 180%;
+			}
+			#calcular {
+				padding: 10px 150px;
+    			font-size: 235%;
+			}
 		}
 		.box .body {
 			background-color: #FAFAFA;
@@ -83,9 +95,6 @@
 		}
 		.box .body ul li {
 			list-style: none;
-		}
-		.tutorial h3 {
-			text-align: center;
 		}
         </style>
 
@@ -118,12 +127,22 @@
 				</div>
 				<div class="body">
 					<p>
-						d
+							Os serviços de rotas e endereços são integrantes da vida moderna e são fonte principal de informação deste meio. Hoje, grande parte dos sistemas de transporte utilizam de rotas geradas automaticamente por sistemas que recebem valores de origem e destino e decidem a melhor rota a ser percorrida baseada em tempo de viagem, considerando as possíveis rotas partindo do ponto de origem até o destino proposto pelo usuário. Esse projeto promove o desenvolvimento de uma solução para otimização de rotas terrestres com múltiplos destinos, seja por serviços de transporte de mercadorias ou pessoas ou locomoção pessoal. Atualmente, com a indisponibilidade de soluções gratuitas para o cenário proposto, o planejamento de rotas de múltiplos destinos fica sem alternativas práticas e satisfatórias, resultando no cálculo manual ou até mesmo no mal planejamento da rota definida para o trajeto, reduzindo a eficiência da estrutura do transporte de pessoas e mercadorias, aumentando os custos financeiros no transporte rodoviário e nos setores dependentes. Diante disso, é proposta a construção de uma aplicação PWA que permitirá o usuário selecionar os pontos desejados e solicitar a ordenação otimizada dos pontos levando em consideração distância e tempo de viagem entre os destinos como parâmetros de decisão de valor. No final do trabalho espera-se a conclusão do desenvolvimento da solução proposta, com o serviço funcionando de intermediário entre os serviços de roteirização e a página solicitante, que sirva de entrada de dados pelo usuário.
 					</p>
 				</div>
 			</div>
 			<div id="mapid"></div>
 			<input type="button" id="calcular" value="Calcular"/>
+			<div class="box result" style="display: none;">
+				<div class="header">
+					<h3 class="title">
+						Resultado
+					</h3>
+				</div>
+				<div class="body">
+
+				</div>
+			</div>
 			<div class="box tutorial">
 				<div class="header">
 					<h3 class="title">
@@ -272,13 +291,12 @@
 						calculateCurrentValue();
 						bnbRunning = false;
 						bnbFinish = true;
-						console.log(best);
 
 						let  router = L.Routing.osrmv1();
 						let waypoints = [];
 						let line;
 
-						best.slice(0, best.length-1).map((b) => {
+						best.map((b) => {
 							let loc = locations[b];
 							waypoints.push({latLng: L.latLng(loc[0], loc[1])});
 						});
@@ -292,8 +310,17 @@
 							} else {
 								line = L.Routing.line(routes[0]).addTo(mymap);
 							}
-
 						});
+
+						document.getElementsByClassName("result")[0].style.display = "block";
+						let resultHTML = "<ol>";
+						console.log(best);
+						resultHTML += `<li>De ponto 0: Lat: ${locations[0][0]}, Lng:${locations[0][1]}</li>`;
+						best.slice(1, best.length-1).map((loc, index) => {
+							resultHTML += `<li>Para ponto ${loc}: Lat:${locations[loc][0]}, Lng:${locations[loc][1]}</li>`;
+						});
+						resultHTML += "</ol>";
+						document.getElementsByClassName("result")[0].children[1].innerHTML = resultHTML;
 					}
 					function BNBSearch(from, followedRoute){
 							if (followedRoute.length == locations.length) {
