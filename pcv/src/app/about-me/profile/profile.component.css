@@ -1,30 +1,23 @@
-* {
-    color: white;
+:host {
+    display: block;
+    background-color: rgba(9, 46, 77, 1.0);
 }
 
-div#profile {
-    width: 20vw; height: 100vh;
-    
-    /* background-color: rgb(9, 46, 77); */
-    /* background-color: red; */
-
-    padding: 2%;
-}
-div.profile-inner {
-    background-color: rgb(9, 46, 77);
-    width: 100%; height: 100%;
-    border-radius: 10px;
-    box-shadow: 0px 2px 10px 0px black;
+/* Mobile Users */
+@media (max-width: 800px){
+    :host {
+        width: 100%;
+        height: 30%;
+    }
 }
 
-h1 {
-    font-size: 1.6vw;
-}
-h3 {
-    font-size: 1.1vw;
-}
-
-a {
-    text-decoration: none!important;
-    color: white!important;
+/* Desktop Users */
+@media (min-width: 801px) {
+    :host {
+        display: block;
+        width: 250px;
+        height: 100%;
+        border-radius: 12px;
+        box-shadow: 0px 2px 10px 0px black;
+    }
 }
