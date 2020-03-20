@@ -4,18 +4,18 @@ import { LevelTable, LevelTableItem } from 'src/app/common/level-table/level-tab
 @Component({
   selector: 'profile-skills',
   templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.css']
+  styleUrls: ['./skills.component.css', '../../profile/profile.component.css']
 })
 export class SkillsComponent {
   title: String = "Skills";
 
   table: LevelTable = new LevelTable([
-    new LevelTableItem("Angular", 90),
-    new LevelTableItem("CSS", 90),
-    new LevelTableItem("C#", 90),
-    new LevelTableItem("HTML", 90),
-    new LevelTableItem("Ionic", 90),
-    new LevelTableItem("JavaScript", 90),
+    new LevelTableItem("Angular", 95),
+    new LevelTableItem("CSS", 95),
+    new LevelTableItem("C#", 95),
+    new LevelTableItem("HTML", 95),
+    new LevelTableItem("Ionic", 95),
+    new LevelTableItem("JavaScript", 95),
     new LevelTableItem("Node.js", 90),
     new LevelTableItem("Flutter", 80),
     new LevelTableItem("SQL", 70),

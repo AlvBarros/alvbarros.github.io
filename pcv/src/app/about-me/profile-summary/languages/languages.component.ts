@@ -4,7 +4,7 @@ import { LevelTable, LevelTableItem } from 'src/app/common/level-table/level-tab
 @Component({
   selector: 'profile-languages',
   templateUrl: './languages.component.html',
-  styleUrls: ['./languages.component.css']
+  styleUrls: ['./languages.component.css', '../../profile/profile.component.css']
 })
 export class LanguagesComponent {
   title: String = "Languages";

@@ -1,27 +1,31 @@
-div.profile-picture {
-    padding: 5% 10%;
-    position: relative;
-    margin-bottom: 2em;
-}
-.profile-picture img {
-    position: relative;
+div#profile-picture {
     width: 100%;
+    height: 25%;
+    padding: 5%;
+    
+    /* background-color: red; */
+
+    position: relative;
+    overflow: hidden;
+}
+div#profile-picture img:first-child {
+    z-index: 10;
+}
+div#profile-picture img {
+    position: relative;
+    width: 80%;
+    /* height: 60%; */
     text-align: center;
     border-radius: 100%;
     border: 3px solid white;
     box-sizing: border-box;
+    display: block;
+    margin: auto;
 }
-.profile-picture div.glass-reflection {
-    overflow: hidden;
-    height: 4em;
-    position: absolute;
-    left: 0;
-    top: 100%;
-}
-.profile-picture div.glass-reflection img.reversed {
+img.reversed {
     transform: rotate(180deg);
 }
-.profile-picture div.glass-reflection::after {
+div#profile-picture div.glass-reflection::after {
     content: "";
     position: absolute;
     z-index: 1;
@@ -30,27 +34,22 @@ div.profile-picture {
     pointer-events: none;
     background-image: linear-gradient(to bottom, 
                       rgba(9, 46, 77, 0.7), 
-                      rgba(9, 46, 77, 1.0) 70%);
+                      rgba(9, 46, 77, 1.0) 100%);
     width: 100%;
-    height: 4em;
+    height: 20%;
 }
 
-.who {
-    z-index: 2;
-    margin-top: -3.6em;
+div#name {
+    z-index: 100;
+    position: absolute;
+    bottom: 0; left: 0;
     width: 100%;
-    position: relative;
+    padding: 2%;
     text-align: center;
 }
-.who h1 {
-    font-size: 2.0vw;
-    font-weight: 500;
-}
-.who h3 {
-    font-size: 1.5vw;
-    font-weight: 100;
-}
-.who h1,
-.who h3 {
+div#name h1,
+div#name h3 {
+    color: white;
     margin: 0;
+    line-height: 0.95em;
 }

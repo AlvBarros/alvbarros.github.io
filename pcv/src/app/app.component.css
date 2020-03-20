@@ -1,27 +1,8 @@
-@media only screen and (max-width: 1366px) {
-    div.profile-box {
-        width: 25vw;
-    }
-    div.other-box {
-        width: 75vw;
-    }
-}
-@media only screen and (min-width: 1367px) {
-    div.profile-box {
-        width: 20vw;
-        /* margin-left: 2.5vw; */
-    }
-    div.other-box {
-        width: 65vw;
-        margin: 0 5vw;
-    }
-}
-
-div.profile-box,
+/* div.profile-box,
 div.other-box {
     float: left;
 }
 
 div.other-box {
     padding: 2.5vw;
-}
+} */

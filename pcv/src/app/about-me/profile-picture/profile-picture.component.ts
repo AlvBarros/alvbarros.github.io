@@ -5,7 +5,7 @@ import { GithubapiService } from 'src/app/services/githubapi/githubapi.service';
 @Component({
   selector: 'app-profile-picture',
   templateUrl: './profile-picture.component.html',
-  styleUrls: ['./profile-picture.component.css']
+  styleUrls: ['./profile-picture.component.css', '../profile/profile.component.css']
 })
 export class ProfilePictureComponent {
   githubAvatarUrl: String;
