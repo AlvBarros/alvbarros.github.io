@@ -1,4 +1,32 @@
-<html>
+<head></head>
+<body>
+    <input type="text" placeholder="URL" id="urlInput" />
+    
+    <input type="text" placeholder="UserName" id="userNameInput" />
+    <input type="text" placeholder="Password" id="passwordInput" />
+
+    <input type="button" onclick="login()">
+        eae
+    </input>
+</body>
+<script>
+    function login() {
+        var xhr = new XMLHttpRequest();
+        var urlInput = document.getElementById('urlInput');
+        var userNameInput = document.getElementById('userNameInput');
+        var passwordInput = document.getElementById('passwordInput');
+        xhr.open("POST", urlInput.value, true);
+        xhr.setRequestHeader('Content-Type', 'multipart/form-data');
+        var formData = new FormData();
+        formData.append('UserName', userNameInput.value);
+        formData.append('Password', passwordInput.value);
+        formData.append('Kmsi', true);
+        formData.append('AuthMethod', 'FormsAuthentication');
+        xhr.send(formData);
+    }
+</script>
+
+<!-- <html>
     <head>
 		<title>
 			Roteirização de Destinos
@@ -390,4 +418,4 @@
 			console.log('reject');
 		});
     </script>
-</html>
+</html> -->
