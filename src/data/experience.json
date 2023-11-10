@@ -1,0 +1,78 @@
+{
+  "professional": [
+    {
+      "jobTitle": "IT Architect",
+      "companyName": "Santander Bank",
+      "companyLink": "http://santander.com/",
+      "timeWorked": { "from": "AUGUST/2019", "to": "CURRENTLY" },
+      "jobDescription": "I lead the development of many features inside the main app for Santander's Brazilian employees. Later, I would join the Frontend Architecture team to work on various SDKs and internal tooling - such as Networking, Cryptography, Analytics - to help development of other apps.",
+      "jobDetails": [
+        "First experience at a leadership position",
+        "Worked primarily on Hybrid applications",
+        "Main stack: Angular, Flutter, Java Spring, Azure, AWS"
+      ]
+    },
+    {
+      "jobTitle": "Fullstack Developer",
+      "companyName": "iRestify",
+      "companyLink": "https://irestify.com/",
+      "timeWorked": { "from": "APRIl/2022", "to": "FEBRUARY/2023" },
+      "jobDescription": "At iRestify, I would work on the Admin platform, on the billing flow and integration with Stripe API. This would automate the creation of bills for their clients and update our databases.",
+      "jobDetails": [
+        "First experience at a international position",
+        "Main stack: Nest.js, React, React Native, AWS"
+      ]
+    },
+    {
+      "jobTitle": "Senior Software Engineer",
+      "companyName": "Vector Software",
+      "companyLink": "https://www.linkedin.com/company/vector-itc/",
+      "timeWorked": { "from": "JANUARY/2019", "to": "AUGUST/2019" },
+      "jobDescription": "I was hired initially as a third-party Senior developer and would work primarily for Santander, before being hired as a Tech Lead for the app mentioned above. At this time, however, I would join different projects to provide assitance to either hit deadlines and deliver in time.",
+      "jobDetails": [
+        "There were many times where I would join a project only for one or two sprints, assist the team in what was needed, and leave",
+        "Main stack: Node.js with Express, React, Angular, jQuery, Microsoft SQL Server"
+      ]
+    },
+    {
+      "jobTitle": "Associate Software Engineer",
+      "companyName": "Avanade IT Solutions",
+      "companyLink": "https://www.avanade.com/",
+      "timeWorked": { "from": "APRIL/2018", "to": "JANUARY/2019" },
+      "jobDescription": "I was a developer for internal tooling inside a health insurance company, Qualicorp, and Albert Einstein Hospital, in São Paulo. This was my first experience with Azure Cloud development and DevOps",
+      "jobDetails": [
+        "At this time, I would be responsible for Azure deployment and infrastructure in the development and staging development",
+        "Main stack: .NET Core, Angular, Azure, Microsoft SQL Server"
+      ]
+    },
+    {
+      "jobTitle": "Software Development Intern",
+      "companyName": "Resource Solutions (Now Qintess)",
+      "companyLink": "https://www.qintess.com",
+      "timeWorked": { "from": "APRIL/2017", "to": "APRIL/2018" },
+      "jobDescription": "This was my first job as a Software Developer, previous to this I was only doing side-projects and freelance. At this time, I had my first contact with Agile methodology, Kanbans, etc. I would work on a website for Itaú Unibanco, Movidas landing page, CPFL admin backoffice, and some other projects.",
+      "jobDetails": [
+        "Main stack: ASP.NET 5, jQuery, Node.js, MySQL"
+      ]
+    }
+  ],
+  "academic": {
+    "publications": [
+      {
+        "title": "Bidimensional Image Processing Solution for Measuring Human Body Parts",
+        "summary": "The present work aims to present a study on visual recognition techniques, based on object detection techniques that are capable of recognizing, delimiting, segmenting and measuring the human foot. The experiments were carried out in the TensorFlow environment in conjunction with the MS-COCO model. It is expected that the results of this application can be used in e-commerce applications such as virtual fitting rooms for the footwear industry and other applications that may arise.",
+        "link": "https://ocs.ifsp.edu.br/conict/xconict/paper/download/5853/1541",
+        "for": "10th IFSP Innovation, Science and Technology Congress (CONICT)",
+        "when": "2019"
+      }
+    ],
+    "degrees": [
+      {
+        "courseTitle": "System Development and Analysis",
+        "college": "Federal Institute of Education, Science and Technology of São Paulo (IFSP)",
+        "collegeLink": "https://www.ifsp.edu.br/",
+        "finished": "2020"
+      }
+    ]
+  }
+}

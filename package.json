@@ -1,0 +1,46 @@
+{
+  "name": "alvbarros-dev-blog",
+  "version": "1.0.0",
+  "private": true,
+  "description": "alvbarros-dev-blog",
+  "author": "AlvBarros",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@fortawesome/fontawesome-svg-core": "^6.4.2",
+    "@fortawesome/free-brands-svg-icons": "^6.4.2",
+    "@fortawesome/free-solid-svg-icons": "^6.4.2",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "gatsby": "^5.12.4",
+    "gatsby-plugin-emotion": "^8.12.0",
+    "gatsby-plugin-google-fonts": "^1.0.1",
+    "gatsby-plugin-image": "^3.12.3",
+    "gatsby-plugin-manifest": "^5.12.3",
+    "gatsby-plugin-react-svg": "^3.3.0",
+    "gatsby-plugin-sass": "^6.12.3",
+    "gatsby-plugin-sharp": "^5.12.3",
+    "gatsby-plugin-sitemap": "^6.12.3",
+    "gatsby-source-filesystem": "^5.12.1",
+    "gatsby-transformer-sharp": "^5.12.3",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "sass": "^1.69.5"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.3",
+    "@types/react": "^18.2.14",
+    "@types/react-dom": "^18.2.6",
+    "typescript": "^5.1.6"
+  }
+}
