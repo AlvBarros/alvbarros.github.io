@@ -8,21 +8,29 @@ import ProfilePicture from "../components/ProfilePicture";
 import ContactLinks from "../components/ContactLinks";
 import Clock from "../components/Clock";
 
-/* Main */
 import Introduction from "../components/Introduction";
 import Experiences from "../components/Experience";
+import CollapsableMenu from "../components/CollapsableMenu";
+import CollapseButton from "../components/CollapseButton";
+import ShareProfile from "../components/ShareProfile";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
     <div className="root">
       <aside>
-        <ProfilePicture />
-        <ContactLinks />
-        <Clock />
+        <CollapseButton />
+        <CollapsableMenu>
+          <ProfilePicture />
+          <ContactLinks />
+          <ShareProfile />
+          <Clock />
+        </CollapsableMenu>
       </aside>
       <main>
-        <Introduction />
-        <Experiences />
+        <div>
+          <Introduction />
+          <Experiences />
+        </div>
       </main>
     </div>
   );

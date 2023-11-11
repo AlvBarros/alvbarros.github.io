@@ -42,20 +42,17 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-react-svg",
       options: {
         rule: {
-          include: '/src/images/',
-        }
-      }
+          include: "/src/images/",
+        },
+      },
     },
     {
       resolve: `gatsby-plugin-google-fonts`,
       options: {
-        fonts: [
-          `Raleway`,
-          `Red Hat Display`
-        ],
-        display: 'swap'
-      }
-    }
+        fonts: [`Raleway`, `Red Hat Display`],
+        display: "swap",
+      },
+    },
   ],
 };
 

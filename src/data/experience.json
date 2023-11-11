@@ -9,7 +9,7 @@
       "jobDetails": [
         "First experience at a leadership position",
         "Worked primarily on Hybrid applications",
-        "Main stack: Angular, Flutter, Java Spring, Azure, AWS"
+        "Main stack: Angular, Flutter,  Kotlin, Swift, Java Spring, Azure, AWS"
       ]
     },
     {
@@ -17,10 +17,10 @@
       "companyName": "iRestify",
       "companyLink": "https://irestify.com/",
       "timeWorked": { "from": "APRIl/2022", "to": "FEBRUARY/2023" },
-      "jobDescription": "At iRestify, I would work on the Admin platform, on the billing flow and integration with Stripe API. This would automate the creation of bills for their clients and update our databases.",
+      "jobDescription": "At iRestify, I contributed to the Admin platform, on the billing AWS step-functions and integrating the system with Stripe API. This would automate the creation of bills for their clients and update the invoice databases accordingly.",
       "jobDetails": [
-        "First experience at a international position",
-        "Main stack: Nest.js, React, React Native, AWS"
+        "First experience at an international position",
+        "Main stack: TypeScript, Nest.js, React, AWS"
       ]
     },
     {

@@ -1,11 +1,35 @@
+$desktop-width: 1024px;
+
+@mixin mobile {
+  @media (max-width: #{$desktop-width - 1px}) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: #{$desktop-width}) {
+    @content;
+  }
+}
+
+.mobile-only {
+  @include desktop {
+    display: none;
+  }
+}
+
 html,
 body,
 #___gatsby,
 #gatsby-focus-wrapper {
-  height: 100%;
-  width: 100%;
+  height: 100vh;
+  width: 100vw;
   margin: 0;
   padding: 0;
+}
+main,
+aside {
+  overflow-y: scroll;
 }
 gatsby-qod {
   display: none;
@@ -21,107 +45,170 @@ div.root {
   }
 }
 
-aside {
-  background-color: #eee;
-  width: 12.5%;
-  text-align: center;
-  section.ProfilePicture {
-    img {
-      width: 100%;
-      border-radius: 100%;
-      box-shadow: 0px 2px 2px 2px #888;
-    }
+/// This will make sure that the Collapsable menu is
+/// only available for mobile
+@include desktop {
+  section.CollapseButton {
+    display: none;
   }
-  section.ContactLinks {
-    ul {
-      padding: 0;
-      text-align: left;
-      li {
-        width: 100%;
-        margin-bottom: 4px;
-        padding: 4px 16px;
-
-        display: flex;
-        columns: 2;
-        flex-wrap: nowrap;
-        list-style: none;
-        svg {
-          cursor: pointer;
-          height: 20px;
-          width: 20px;
-          margin-right: 4px;
+  aside,
+  section.CollapsableMenu {
+    min-width: 300px;
+  }
+}
+@include mobile {
+  section.CollapsableMenu {
+    z-index: 1000;
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    padding-top: 20%;
+    transition: all 0.4s ease;
+    background-color: white;
+  }
+  section.CollapseButton {
+    input {
+      z-index: 1002;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 50px;
+      width: 50px;
+      cursor: pointer;
+      opacity: 0;
+    }
+    div.hamburger {
+      z-index: 1001;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      padding: 0.6rem;
+      div {
+        position: relative;
+        top: 0;
+        left: 0;
+        background: black;
+        height: 2px;
+        width: 60%;
+        transition: all 0.4s ease;
+        &::before {
+          top: 10px;
         }
-        span {
-          cursor: pointer;
-          height: 100%;
-          width: calc(100% - 20px);
-          margin: auto auto auto 0;
+        &::after {
+          top: 20px;
         }
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          background: black;
+          width: 100%;
+          height: 2px;
+          transition: all 0.4s ease;
+        }
+      }
+    }
+    &.checked {
+      div.hamburger {
+        div {
+          top: 10px;
+          transform: rotate(45deg);
+        }
+        div::before {
+          top: 0px;
+          transform: rotate(-90deg);
+        }
+        div::after {
+          top: 0px;
+          transform: rotate(-90deg);
+          height: 1px; // LUL
+        }
+      }
+      & ~ section.CollapsableMenu {
+        left: 0;
       }
     }
   }
 }
-main {
-  width: 75%;
-  padding: 24px 80px;
-  section.Introduction {
-    text-align: center;
-    h1 {
-      margin-bottom: 0;
-      font-family: "Red Hat Display";
-      font-size: 40px;
-      text-transform: uppercase;
+
+section.ContactLinks,
+section.ShareProfile,
+section.Clock {
+  text-align: left;
+  ul {
+    list-style: none;
+    padding: 0 16px;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 8px;
+      }
     }
   }
-  section.Experience {
+
+  @include mobile {
+    padding: 0 15%;
     h1 {
-      margin-bottom: 2.5rem;
-    }
-    div.divider {
-      width: 100%;
-      height: 1px;
       text-align: center;
-      background-color: #ccc;
-      margin-bottom: 5rem;
+      font-family: "Red Hat Display";
     }
-    span.showMore {
-      text-decoration: underline;
+  }
+}
+
+section.Clock {
+  text-align: center;
+  span.my-timezone {
+    font-style: italic;
+  }
+}
+
+/* Components CSS */
+section.ProfilePicture {
+  text-align: center;
+  img {
+    @include mobile {
+      width: 25%;
     }
-    ul {
-      padding: 0;
-      list-style: square;
+    @include desktop {
+      width: 50%;
     }
-    li.experience.professional {
-      h3,
-      a {
-        margin-top: 0;
-        display: inline-block;
+    border-radius: 100%;
+    box-shadow: 0px 2px 2px 2px #888;
+  }
+}
+
+section.ShareProfile,
+section.ContactLinks {
+  /// Add hover effect to indicate clickable event
+  ul li {
+    cursor: pointer;
+    &:hover {
+      color: #888;
+    }
+  }
+
+  /// When on desktop, display as a vertical list
+  /// right below the [ProfilePicture]
+  // @include desktop {
+  ul {
+    padding: 0 16px;
+    li {
+      &:not(:last-child) {
+        margin-bottom: 8px;
       }
-    }
-    li.experience.academic {
-      a, span.time {
-        display: inline-block;
+      svg,
+      span {
+        vertical-align: middle;
+        line-height: normal;
       }
-    }
-    li.experience {
-      a {
-        color: black;
+      svg {
+        height: 20px;
+        width: 20px;
+        margin-right: 4px;
       }
-      &:not(:first-child) {
-        margin-bottom: 2.5rem;
-      }
-      &:not(:last-child)::after {
-        display: block;
-        width: 80%;
-        height: 1px;
-        margin-top: 1em;
-        margin-bottom: 1em;
-        background-color: #ccc;
-        content: "";
-      }
-    }
-    div.description ul {
-      margin-left: 40px;
     }
   }
 }

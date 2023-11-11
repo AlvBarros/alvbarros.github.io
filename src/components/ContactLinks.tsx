@@ -36,6 +36,7 @@ const ContactLinks: React.FC = () => {
 
   return (
     <section className="ContactLinks">
+      <h1> Contacts </h1>
       <ul>
         {contactLinks.map((contact) => {
           return (
