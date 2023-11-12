@@ -8,10 +8,10 @@ export const ShareProfile = () => {
     <section className="ShareProfile">
       <h1> ShareProfile my profile </h1>
       <ul>
-        <li className="mobile-only">
+        <li className="mobile-only clickable">
           <FontAwesomeIcon icon={faPaperPlane} /> Share profile link
         </li>
-        <li>
+        <li className="clickable">
           <FontAwesomeIcon icon={faDownload} /> Download as PDF file
         </li>
         <li>[QR Code]</li>

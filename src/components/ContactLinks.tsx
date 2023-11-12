@@ -40,14 +40,13 @@ const ContactLinks: React.FC = () => {
       <ul>
         {contactLinks.map((contact) => {
           return (
-            <li key={contact.icon}>
+            <li key={contact.icon} className="clickable">
               <FontAwesomeIcon
                 icon={iconToComponent(contact.icon)}
                 onClick={() => redirect(contact.link)}
               />
               <span onClick={() => redirect(contact.link)}>
-                {" "}
-                {contact.description}{" "}
+                {contact.description}
               </span>
             </li>
           );
