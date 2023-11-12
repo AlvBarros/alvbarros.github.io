@@ -27,10 +27,8 @@ const IndexPage: React.FC<PageProps> = () => {
         </CollapsableMenu>
       </aside>
       <main>
-        <div>
-          <Introduction />
-          <Experiences />
-        </div>
+        <Introduction />
+        <Experiences />
       </main>
     </div>
   );

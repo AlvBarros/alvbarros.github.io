@@ -56,10 +56,11 @@ div.root {
   section.CollapseButton {
     display: none;
   }
-  aside,
-  section.CollapsableMenu {
+  aside section.CollapsableMenu {
     min-width: 300px;
-    padding: 0 16px;
+  }
+  section.CollapsableMenu {
+    padding: 16px;
   }
 }
 @include mobile {
@@ -220,4 +221,14 @@ section.Introduction {
     text-align: center;
     text-transform: uppercase;
   }
+}
+
+span.divider {
+  display: block;
+  width: 100%;
+  height: 1px;
+  text-align: center;
+  background-color: #ccc;
+  margin-top: 1rem;
+  margin-bottom: 3rem;
 }
