@@ -1,7 +1,7 @@
 import React from "react";
 
 export const CollapseButton = () => {
-  const [isChecked, setChecked] = React.useState(true);
+  const [isChecked, setChecked] = React.useState(false);
   return (
     <section className={isChecked ? "CollapseButton checked" : "CollapseButton"}>
           <input type="checkbox" onClick={() => setChecked(!isChecked)}/>
