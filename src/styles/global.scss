@@ -242,6 +242,28 @@ section.Introduction {
   }
 }
 
+section.Experience {
+  padding: 0 16px;
+  ul {
+    li {
+      list-style: square;
+      a {
+        color: black;
+      }
+    }
+  }
+
+  & > ul > li:not(:last-child)::after {
+    display: block;
+    width: 80%;
+    height: 1px;
+    margin-top: 1em;
+    margin-bottom: 1em;
+    background-color: #ccc;
+    content: "";
+  }
+}
+
 span.divider {
   display: block;
   width: 100%;
