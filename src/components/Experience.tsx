@@ -18,16 +18,16 @@ function renderProfessionalExperience(
   index: number
 ) {
   return (
-    <li key={index} className="experience professional">
+    <li key={index}>
       <h3>{exp.jobTitle} </h3> @{" "}
-      <a className="companyName" href={exp.companyLink}>
+      <a href={exp.companyLink}>
         {exp.companyName}
       </a>
-      <div className="time">
+      <div>
         <span className="from">{exp.timeWorked.from.toString()}</span> -{" "}
         <span className="from">{exp.timeWorked.to.toString()}</span>
       </div>
-      <div className="description">
+      <div >
         <p> {exp.jobDescription} </p>
         <ul>
           {exp.jobDetails.map((detail, index) => {
@@ -41,25 +41,25 @@ function renderProfessionalExperience(
 
 function renderAcademicExperience(degree: Degree, index: number) {
   return (
-    <li key={index} className="experience academic degree">
+    <li key={index}>
       <h3>{degree.courseTitle} </h3>
-      <a className="collegeName" href={degree.collegeLink}>
+      <a href={degree.collegeLink}>
         {degree.college}
-      </a>{" "}
-      - <span className="from">{degree.finished}</span>
+      </a>
+      - <span>{degree.finished}</span>
     </li>
   );
 }
 
 function renderAcademicPublications(publication: Publication, index: number) {
   return (
-    <li key={index} className="experience academic degree">
+    <li key={index}>
       <h3>{publication.title} </h3>
-      <a className="collegeName" href={publication.link}>
+      <a href={publication.link}>
         {publication.for}
-      </a>{" "}
-      - <span className="when">{publication.when}</span>
-      <div className="description">
+      </a>
+      - <span>{publication.when}</span>
+      <div>
         <p> {publication.summary} </p>
       </div>
     </li>
