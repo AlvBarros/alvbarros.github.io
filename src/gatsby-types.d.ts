@@ -2373,10 +2373,5 @@ type GatsbyImageSharpFluid_withWebp_tracedSVGFragment = { readonly tracedSVG: st
 
 type GatsbyImageSharpFluidLimitPresentationSizeFragment = { readonly maxHeight: number, readonly maxWidth: number };
 
-type GetProfilePictureQueryVariables = Exact<{ [key: string]: never; }>;
-
-
-type GetProfilePictureQuery = { readonly allImageSharp: { readonly edges: ReadonlyArray<{ readonly node: { readonly fluid: { readonly base64: string | null, readonly tracedSVG: string | null, readonly srcWebp: string | null, readonly srcSetWebp: string | null, readonly originalImg: string | null, readonly originalName: string | null } | null } }> } };
-
 
 }
