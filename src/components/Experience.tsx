@@ -81,7 +81,7 @@ const Experiences: React.FC = () => {
         {showsMore &&
           professionalExperiences.slice(2).map(renderProfessionalExperience)}
       </ul>
-      <span onClick={toggleShowMore} className="showMore">
+      <span onClick={toggleShowMore} className="clickable">
         {showsMore ? "Show less" : "Show more"}
       </span>
 
