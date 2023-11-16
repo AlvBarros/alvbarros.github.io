@@ -14,7 +14,7 @@ $desktop-width: 1024px;
 
 .mobile-only {
   @include desktop {
-    display: none;
+    display: none!important;
   }
 }
 
