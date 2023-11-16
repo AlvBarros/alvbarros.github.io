@@ -157,6 +157,10 @@ section.ProfilePicture {
 
 section.ShareProfile,
 section.ContactLinks {
+  a {
+    text-decoration: none;
+    color: initial;
+  }
   /// When on desktop, display as a vertical list
   /// right below the [ProfilePicture]
   // @include desktop {
@@ -166,6 +170,9 @@ section.ContactLinks {
       display: block;
       cursor: pointer;
       &:hover {
+        color: #888;
+      }
+      a:hover {
         color: #888;
       }
     }
